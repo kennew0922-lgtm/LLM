@@ -33,51 +33,50 @@
         .section-title {
             background: #000;
             color: #00f2fe;
-            padding: 10px 20px;
-            margin: 60px 0 20px 0;
-            font-size: 12px;
+            padding: 8px 15px;
+            margin: 50px 0 15px 0;
+            font-size: 11px;
             font-weight: bold;
-            border-left: 5px solid #00f2fe;
-            letter-spacing: 3px;
+            border-left: 4px solid #00f2fe;
+            letter-spacing: 2px;
             box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.2);
         }
 
         /* 🌸 写真格納庫（グリッド） */
         .gallery {
             display: grid;
-            /* ✨ minmaxを150pxから80pxに変更して、半分くらいのサイズに調整 */
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            gap: 12px;
-            margin-bottom: 40px;
+            /* ✨ さらにコンパクトに！80pxから45pxへ魔法をかけました */
+            grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
         }
 
         .memory-card {
             border: 1px solid rgba(0, 242, 254, 0.3);
             background: rgba(255, 255, 255, 0.05);
-            padding: 5px; /* コンパクトに */
+            padding: 4px; /* 極限までコンパクトに */
             transition: 0.3s;
             text-decoration: none;
-            display: block;
-            /* ✨ 正方形を維持するための魔法 */
-            aspect-ratio: 1 / 1; 
             display: flex;
+            aspect-ratio: 1 / 1; 
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            border-radius: 6px;
         }
 
         .memory-card:hover {
             border-color: #00f2fe;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-            transform: scale(1.1); /* コンパクトなので少し大きめにズーム */
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+            transform: scale(1.2); /* 小さい分、ホバー時は少し大胆に大きく */
+            z-index: 10;
         }
 
         .memory-card img {
             width: 100%;
             height: 100%;
-            /* ✨ 画像を正方形にフィットさせる */
             object-fit: contain; 
-            border-radius: 4px;
+            border-radius: 3px;
         }
 
         /* カスタムスクロールバー */
@@ -93,101 +92,36 @@
 
     <div class="section-title">LLM WORLD</div>
     <div class="gallery">
-        <a href="https://chatgpt.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon1.png" alt="Gemini">
-        </a>
-
-        <a href="https://gemini.google.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon2.png" alt="Gemini">
-        </a>
-
-        <a href="https://claude.ai/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon3.png" alt="Gemini">
-        </a>
-
-        <a href="https://grok.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon4.png" alt="Gemini">
-        </a>
-
-        <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon5.png" alt="Gemini">
-        </a>
-
-        <a href="https://www.meta.ai/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon6.png" alt="Gemini">
-        </a>
-
-        <a href="https://chat.deepseek.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon7.png" alt="Gemini">
-        </a>
-
-        <a href="https://ernie.baidu.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon8.png" alt="Gemini">
-        </a>
-
-        <a href="https://chat.qwen.ai/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon9.png" alt="Gemini">
-        </a>
-
-        <a href="https://www.kimi.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon10.png" alt="Gemini">
-        </a>
-
-        <a href="https://chat.mistral.ai/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon11.png" alt="Gemini">
-        </a>
-
-        <a href="https://search.yahoo.co.jp/chat?fr=sfp_tablink_aichat&ml=prop%3Aai_chat%3Bfrtype%3Asfp_tablink_aichat%3B&ml2=%7B%22frtype%22%3A%22sfp_tablink_aichat%22%2C%22prop%22%3A%22ai_chat%22%7D&nasb=1&frtype=sfp_tablink_aichat" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon12.png" alt="Gemini">
-        </a>
-
+        <a href="https://chatgpt.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon1.png" alt="ChatGPT"></a>
+        <a href="https://gemini.google.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon2.png" alt="Gemini"></a>
+        <a href="https://claude.ai/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon3.png" alt="Claude"></a>
+        <a href="https://grok.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon4.png" alt="Grok"></a>
+        <a href="https://copilot.microsoft.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon5.png" alt="Copilot"></a>
+        <a href="https://www.meta.ai/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon6.png" alt="MetaAI"></a>
+        <a href="https://chat.deepseek.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon7.png" alt="DeepSeek"></a>
+        <a href="https://ernie.baidu.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon8.png" alt="Ernie"></a>
+        <a href="https://chat.qwen.ai/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon9.png" alt="Qwen"></a>
+        <a href="https://www.kimi.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon10.png" alt="Kimi"></a>
+        <a href="https://chat.mistral.ai/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon11.png" alt="Mistral"></a>
+        <a href="https://search.yahoo.co.jp/chat..." target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon12.png" alt="YahooAI"></a>
     </div>
 
-    <div class="section-title">SONG AI WORLD </div>
+    <div class="section-title">SONG AI WORLD</div>
     <div class="gallery">
-        <a href="https://www.mureka.ai/ja/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon13.png" alt="Gemini">
-        </a>
-
-        <a href="https://suno.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon14.png" alt="Gemini">
-        </a>
-
-        <a href="https://www.udio.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon15.png" alt="Gemini">
-        </a>
-
-        <a href="https://elevenlabs.io/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon16.png" alt="Gemini">
-        </a>
-
-        <a href="https://mubert.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon17.png" alt="Gemini">
-        </a>
-
+        <a href="https://www.mureka.ai/ja/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon13.png" alt="Mureka"></a>
+        <a href="https://suno.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon14.png" alt="Suno"></a>
+        <a href="https://www.udio.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon15.png" alt="Udio"></a>
+        <a href="https://elevenlabs.io/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon16.png" alt="ElevenLabs"></a>
+        <a href="https://mubert.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon17.png" alt="Mubert"></a>
     </div>
 
-    <div class="section-title">Generative AI WORLD </div>
+    <div class="section-title">Generative AI WORLD</div>
     <div class="gallery">
-        <a href="https://www.midjourney.com/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon18.png" alt="Gemini">
-        </a>
-
-        <a href="https://stablediffusionweb.com/ja" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon19.png" alt="Gemini">
-        </a>
-
-        <a href="https://dreammachineai.online/ja/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon20.png" alt="Gemini">
-        </a>
-
-        <a href="https://www.vidu.com/ja/" target="_blank" rel="noopener" class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/LLM/icon21.png" alt="Gemini">
-        </a>
-
+        <a href="https://www.midjourney.com/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon18.png" alt="Midjourney"></a>
+        <a href="https://stablediffusionweb.com/ja" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon19.png" alt="StableDiffusion"></a>
+        <a href="https://dreammachineai.online/ja/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon20.png" alt="Luma"></a>
+        <a href="https://www.vidu.com/ja/" target="_blank" rel="noopener" class="memory-card"><img src="https://kennew0922-lgtm.github.io/LLM/icon21.png" alt="Vidu"></a>
     </div>
-
-
 
 </body>
 </html>
